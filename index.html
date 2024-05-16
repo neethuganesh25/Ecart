@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH</title>
+</head>
+<!-- bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!--javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family:"Play";
+    }
+</style>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: black;">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Ecart</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-dark" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item text-dark" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item text-dark" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark text-light" type="submit">
+                            <i class="bi-cart-fill me-1 text-white"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class=" py-5" style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJABCAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xAA8EAABAwIEAwUFBgYBBQAAAAABAAIDBBEFEiExBkFREyJhcYEHFDKRwSNSobHR8BUkQpLh8UNEU2KDsv/EABsBAQACAwEBAAAAAAAAAAAAAAABBQIEBgMH/8QAMBEAAgICAAMFBwMFAAAAAAAAAAECAwQRITFBBQYSUbETImGBkaHBI3HRFDJC4fD/2gAMAwEAAhEDEQA/AOjREV0QEREAREQBERAQnJSoQBERAEUogIUoiAkbIoUjZQCVKhFBBKhEQBCiFCSlQpULIBQpUIQFKhEAKIiAIiICpERCQiIgCIiAIihAEREAREQEoiIQEREBI2RQiMkm6sVdZTUUXa1lRDBH96VwaPxVvE66HDKCatqSRFC0uNtz0A8Sdly9XwRjfEFFDiUskMk81pn0xdq1u7Y28hYLWyMhUpebM4VufI6qixGjrWl1HVRT2/7bwVljZeZGrGE1LqR8D6V8NtHAtcF2vDWLDF6EvNu1ifkeBz6H1GnovLHy1bLwvgzOynwLezcKCl1BW6eJChSoUkBQl05IAihEBKhSoQEooRAVoihCSUUIgJRQpQBQURAEREAREQglFCIAiclS5wYLk2QkqS+igEOYHtOYO6cvAoVCafFA5zjx1OcFMVU+URucHGOENLngEXGugAJBO+23NZk2N4xTUODVVNSvnpqiQfaEvYctwC13ZuFnAX1JsbHRc77Raetc+kqoJHNYzuMLT8Lje9/MWHpZZ/ADpMcpJo66Rv2Ya2V73Nu0W3aLaeltbqnzW/aM3MdcNM3/ABfwkMejidV4jM97SAwua0AA77C+v4LmuCYWUmO49QwTdtDTmJmZpuL96+vgbj0XWVdb2sZo4CainZo952IG4PjovPeEnPouKYooCBFUxlsgA0uGl3z0FvVeGJZq1NnpfD3eB6OpTQ7bKF0BXi6IoQBEUIQEREBKhEQBERAVIiISEREAREQgIiISEUIhBKKEugJRQoKAm6gkWN9Rz0UX0TW2g15IyTFwudjpJaR2Rk9u0igDg9+TYl1hYX3tyWVvYC5JNgD1WvEEjatnu2IOZAwl0lM2HKJDpe7ua2tKR75EGghpeLXVfjWyVUm+hsW1rxpLqc/7RKVtJhNMyd9zNJq3awA/yvNaejfXYtSCjdKyOZwactwC0fmvRPbFEwMw55d38zmhn3hoTrsLWCs+z7C2Vz6pscQIghja19/h1JPz39FVztlJucuZsqC0l0OtwjCxRUbYGRnNltY9drLmJOEKqLE48Tw90kkcFRlcIm5ibHvWB+IDUG2xva5uB2uLMqKqvpcBoql8c8rO2rqmPeCn6NPJz9gdxyWRxPK+CmpMFwZjYaysZ7vSNYNKWFo70luVhoPFRGLTWub+y8zzncnw6GBFhtRICQAGNOjib3HoscNzS9m2+Ym3ebbX1UcZ4x/BsHp4Yi9jjYN7I2cAPHysFwOGcS1WO4z/ADVjT0pkNPUPP2jWgd7Ub7Fw8WDoVYV5lk5GE64QjxO88kWJQ1bpmlszWsnbdr28rjQ29dPkeayToTv6q1NQlFCICUREAREQBFBRAVoiISEREAREQBQpUIQFClQgCKCoJQEqLqm6i6kFRKi6i6gu1QE0sUfv13m3aNyg+Ky6ONwr2RvFnNOvyWC8kju7tNwtn79BFQPxOUOLqWMvlDdSWDU2HUC59PFVWTJ0ylHpP1NytKaT8jnvanRuxKCkiizGcSZYY2NBdLI7QMHnqfCxK3fDuDw8B4BV1+IuE02VnatZe8kmzY2+Fzbrve6t4hHG/iKixFkl46eEuhbfQvfpmtzs2/8AcmG4g3ifiYyEB2EYC4CNh/6isPPyZf5lVi8Mnp8lxf8ABnZ4ly6nQYHSnB8Kq8SxyRra2oBq8QlP/GLXEY8GjT/awMC94rBLxBWR9nUYoB2LHHvRUo1Y0dL7nrcKjiOeTiLEY+GIQRTMLanGJybBke7Y/Nx+QF1saupYZ5HxZQ1rQ1uQ7DkFM5tLb5y+yMKa/FL9jivaU8OpZSwZ5GR5YwBu9xsAPwWi4fws4PHTyTsY+ozNjhaL2ADHAkgdc7zbrZbvGA6qxiG7rtaS8jxGjR+JPoEpx2+IB51ZCyzPEn/X4quuzJ1+7F6OipwKpJWWLelyNhxDhBwnAjjNC/tLtjvG4/CRZma43NtDprZcThPGlTNi7IcQbDFTuJjIaD3Tydfp+p6L2CmhirOFn0k7czMro3eR/wBr58xiidT1jwfjDnMebf1A2+i6Ps/JldRCcnt6Ryd8fBNpeZ67mUgrnODsXdX4eIZnfzNOAHeLeR+not+DptbwVontbMU9l0FSrYKrCkEooRQAiIgK0REJCIiEBFCIAiKLoAoKXQlARfRUkoVQSpAJUXUXUICoHpqei6afhylY1t6iVjiNe6HC/NcNjLqh4p6SiL/eamUMYGOIPncbcvIL0DDaV9FQQU8s8k8jG2fLI4kvdzOuu+3gqPt/tGWBTCVb9+XJfBc2/RefyM6F7Sxx1wRxnGdLW4XhtsKdJUVNQ4QxuZC77MuNsxtfYXPTQ+ukxjDsTocJZQ0heWTwmE9rKA8gN7ztTrp+i9Xy+F1bfFG92ZzGl1rBxF7Bcw+89k0vbVp/s9fybio8P9rPK+HP4ximAU7DiNJh9CIhG+qc5hqC1ri3IwE93ugd7xFua7JuIw0NLBh/CtPh8lURaFrX3ipxze+xOZ3gLud+K0HtAqad9RT0lPFE3IC9zgwA22Av0Njp4BY3s+eXcX0UQNw0PlcT4McB+ZXYYfZ8MrBWY9x2m1Hh9X+Cptz5wyfYa302b9rDSdrg+CTZq6/b4pidQztHRudrnI+HtD/SzkNSOR0reJcNwulqMP7SqMsMz2F09y+Rx1Jv1JPptyXpX8Ao44520ofF20r55LSON5HG5dv1+S8uxXCqagxJ7KhtmUsh7MFpzOJN7m/nvz3VVdBrb8/uX/Z6jOa2+RXhrZ3Qmoqzlnm1IvcM6D8/mt6KFsFJA8NsXi9vVaOnxuCOb7akLmDYh2o9NlvIsYpK0RRxyWdm7rHix8gqTIqsjtzReTt3pQ5HVYXlNO+O1gdTZeOcd0hp+JcQgy27QMqY9PvXBH9zXH1XsOHnK9p+8FwftYoMtdhmIDQEvp3+Nxmb/wDLvmrju/bvDh8Nr7s5PLX6jPPcIq3YbXRVUNiG917fvN5j9+C9NhlZLEySNwcxzQWkcwvNIqCeqkkZTR53N7xbcD8103CdXNCXYZXNfG5tzBnBAI5i/hv6+C6WEuOjUizqgVIKtNOiqB1XsZl4FFQCqrqASii6IC6iIgCIiEkIpUIQQoUqCgBVJKkqklSCklW3FVuKtkqQQhKi+iyMOpDXVjIrd3d56D9/Red1sKa3ZN6S4kpNvSM7hvDQ6sfiVQ27gzs6cdB/U7129PFdMNlbaAxoY0Wa0WA6BVAr5L2j2hPOyJWz+S8l0X/deJZ1VKuOkVLDxCobEwtL8gylz3/cYPiPyWTJI2JjpHus1ouVxnHOIyUuDGP4anEHWy31ZGNbfkPUqezsOWblQx4/5PXy6v5IxutVNcrH0OIrq12I4jPWPGXtXd1v3W7NHoAAt/7MIpH8Wic/A6KQNPS1h9VymbJG53QG30XZeySLLjrhf4aVxPnmaF9vyYRpxHXBaSjpeiONx5OWQpPm2eotxCJpIdDISDtuCuV4vnjqpYpWRGNwGUlzbFw/x9V0cEskhIcaA+Jvdafi+n/kO1aYnFrgSWC1uS5erhYjpDh62lgfC49mGvuNW93mFn8O4ewVDXtaG5Nb8ysU2eAD1W7wWaCOTI+VsV9nuIACou8kbXPVcW+HRebZYYtuq2mzp8PjLpWNHmtR7RqKlrcFkgFS19Ux7ZYYgdczTrpfS4JFz1U4vVQe4yNp62N7tNGSC5Fx05WXNg9F792sWf8ASNWbWpPh9DUypJz2jS4Hhc9N275I8j3yaBx2A228z+q3UUQjOa+Zx5kajyCqul11MYKJrFwHRSCrYKqaVmC6FUqAqgoBUNkREBeREUEhEUIAiIgIUFSoKEFJKoKrOytuUgocVQSpcVbJUgknZdRgEDIKa7XsdJJq6xvYdFyZctdiVViVNI2WggZPGG99mazr+H7PkqjtvAvzcb2VMtceXn8PyetVka5bkenlGnReU0vH8kT8lT71C5uhBtIB89VvKPj6mkAHvVMT/wCYMZ/FfP7+7/aND3Kt/Lj6cDehk0z4KSOwqCamoZAPgYQ5/ieQ/fgvLOMcU/i2OTvjN4YPsoh4A6n53XXY/wATUuH8MVFZRSh0sh7KMZhcPdz9Bc+i8lGKtAAbBa3V/wDhdd3JwHCU8u1a17q/L/H1KrtmcpRjVD92bCclrWsO5IXoHspIZida92zYAAfN3+F5g2v7Z95GgAdD9F3fAePw4WKqQwe8CUMbdr8pbbN4Hr+C7vManjzUef8AspcWpxvhv4+h6rhlbHJGwmUi4/5IrD+4KniCEVeHTN0ddhy2K1XD9SBEwtJsQCSDofMLfykSxGwtouVa8Mi/6nk7XKoOUV0fu9bPERbJIQPK6shyuFxRiZbXKvMsVr1WHJoGRmUgqwHKrMhBeuq2lWGlXWFAXmq4CrQVYUArRRdEBkKERQAiIgCIiAhQVKglAUu2VtyrcdVbcpBberLirkix3FSCXFWnOUOcrTnLIFqopKaofnmp4pHAWzOYDorPuVE0d2lgH/rH6K+5ytucm2R4UWjS0oN/doQfCMfoszDIad0pjMMWouO4OXp4rDc5XKGbsq2E8i4A+uiwntxJSR09PFEw2bDGPJgWm4iYI8SOlrsa7bzC3kQ74Wn4rblqqd/3oyPkb/VatT/UMnyNpwfXh5dSudZ7NWdCOi7qI9wW2K8gwip7DEIXg2ucp9V6nhtW2aJuuq88iGpbIRwvGEXu2Oy22kY134W+i04droun9oUGSamn7xBzMJ6cwPzXIB626XutBmUHK41yxA9XGvXqQZQcqwVjNerrDcogX2FXmbqwxXm7qGDIaq+SobspuoBN0VJKID//2Q=='); height:500px; display: flex; justify-self: center; align-items: center; background-repeat: no-repeat; background-size: cover; ">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Shop in style</h1>
+                    
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div  class="container px-4 px-lg-5 mt-5 ">
+                <div id="result" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    
+                    </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+    
+</body>
+<script>
+    fetch('https://fakestoreapi.com/products').then((response)=>{
+        console.log(response);
+        response.json().then((product)=>{
+            console.log(product);
+            product.forEach(item=> {
+                result.innerHTML +=`<div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="${item.image}" height='300px' width='300px' alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">${item.title.slice(0,25)}Fancy Product</h5>
+                                    <!-- Product price-->
+                                    ${item.price}
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>`
+                
+            });
+        })
+    }).catch((err)=>{
+        console.log(err);
+    })
+</script>
+</html> 
